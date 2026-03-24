@@ -1,0 +1,7 @@
+aid: cinemark-holdings
+url: https://raw.githubusercontent.com/api-evangelist/cinemark-holdings/refs/heads/main/apis.yml
+modified: '2026-03-23'
+apis: []
+common:
+  - type: Website
+    url: https://www.cinemark-holdings.com
