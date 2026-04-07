@@ -1,7 +1,11 @@
 aid: cinemark-holdings
-url: https://raw.githubusercontent.com/api-evangelist/cinemark-holdings/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/cinemark-holdings/refs/heads/main/apis.yml
 modified: '2026-03-23'
 apis: []
 common:
   - type: Website
     url: https://www.cinemark-holdings.com
+description: >-
+  Cinemark Holdings is one of the largest motion picture exhibitors in the world,
+  operating theatres in the United States and Latin America.
