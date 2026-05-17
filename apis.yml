@@ -35,9 +35,9 @@ common:
     url: https://www.cinemark.com/movie-club
   - type: Gift Cards
     url: https://www.cinemark.com/gift-cards
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.cinemark.com/privacy-policy
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.cinemark.com/terms-of-use
   - type: Support
     url: https://www.cinemark.com/contact-us
