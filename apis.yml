@@ -23,6 +23,8 @@ description: >-
   agreements and third-party aggregators (Movio, Atom Tickets, Fandango).
 apis: []
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/cinemark
   - type: Website
     url: https://www.cinemark.com
   - type: Corporate Website
