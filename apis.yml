@@ -28,7 +28,7 @@ common:
     url: https://www.linkedin.com/company/cinemark
   - type: Website
     url: https://www.cinemark.com
-  - type: Corporate Website
+  - type: Website
     url: https://investors.cinemark.com
   - type: Mobile App (iOS)
     url: https://apps.apple.com/us/app/cinemark-theatres/id383036269
