@@ -24,6 +24,8 @@ description: >-
   agreements and third-party aggregators (Movio, Atom Tickets, Fandango).
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/cinemark-holdings-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/cinemark
   - type: Website
