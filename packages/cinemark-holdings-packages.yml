@@ -1,0 +1,54 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  npm registry search + registry.npmjs.org metadata, pypi.org/pypi/<pkg>/json, and a
+  GitHub repository search for "cinemark". The Cinemark Brasil developer portal's
+  "Download SDKs" page (https://developers.cinemark.com.br/api-portal/node/8) was also
+  read: it is unmodified Sensedia/Evernote template markup listing "Install SDK" links
+  for thirteen platforms, none of which resolve to a Cinemark artifact.
+note: >-
+  NO FIRST-PARTY CINEMARK CLIENT LIBRARY EXISTS on any public registry. Nothing is
+  published under a Cinemark-controlled npm scope, PyPI account, Maven group, NuGet
+  owner, RubyGems owner, crates.io owner, Packagist vendor or Go module path. The two
+  entries below are third-party community wrappers over undocumented endpoints, recorded
+  for completeness with official:false; neither is endorsed, maintained or distributed by
+  Cinemark Holdings. Because there is no official SDK, NO `type: SDKs` pointer is wired
+  into apis.yml.
+official_package_count: 0
+package_count: 2
+packages:
+  - name: butaca
+    registry: npm
+    url: https://www.npmjs.com/package/butaca
+    repository: https://github.com/crafter-station/butaca
+    official: false
+    language: javascript
+    version: 0.4.1
+    published: '2026-08-30'
+    license: MIT
+    note: >-
+      Third-party CLI reading Cinemark Argentina listings and seat maps. Published by an
+      independent maintainer (crafter-station), not by Cinemark. Actively released.
+  - name: cinemark-python
+    registry: pypi
+    url: https://pypi.org/project/cinemark-python/
+    repository: https://github.com/tafarelyan/cinemark-python
+    official: false
+    language: python
+    version: 0.0.6
+    published: '2017-03-05'
+    note: >-
+      Third-party wrapper described by its author as covering "a API publica do Cinemark"
+      via the showtimes feed at www.cinemark.com.br/programacao.xml. That feed is now dead
+      (HTTP 404 as of 2026-09-05 — the Brazilian site was rebuilt on Next.js), so this
+      package no longer works against a live surface. Abandonment signal: last release
+      2017-03-05, nine years stale.
+registries_checked:
+  - {registry: npm, result: no-first-party-package}
+  - {registry: pypi, result: no-first-party-package}
+  - {registry: maven-central, result: no-first-party-package}
+  - {registry: nuget, result: no-first-party-package}
+  - {registry: rubygems, result: no-first-party-package}
+  - {registry: packagist, result: no-first-party-package}
+  - {registry: crates.io, result: no-first-party-package}
+  - {registry: pkg.go.dev, result: no-first-party-package}

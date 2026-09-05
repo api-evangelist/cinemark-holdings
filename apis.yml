@@ -35,15 +35,20 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cinemark-holdings.png
 access: 3rd-Party
 created: '2026-03-23'
-modified: '2026-04-23'
+modified: '2026-09-05'
 position: Consuming
 description: >-
-  Cinemark Holdings is one of the largest motion picture exhibitors in the
-  world, operating theatres across the United States and Latin America under
-  the Cinemark, Century, Tinseltown, Rave, and CineArts brands. Cinemark does
-  not currently publish a general-purpose public developer portal; ticketing,
-  showtime, and loyalty integrations are typically delivered through partner
-  agreements and third-party aggregators (Movio, Atom Tickets, Fandango).
+  Cinemark Holdings, Inc. (NYSE: CNK) is one of the largest motion picture exhibitors in
+  the world, operating theatres across the United States and fifteen Latin American
+  countries under the Cinemark, Century, Tinseltown, Rave and CineArts brands. Cinemark
+  publishes no general-purpose public API and no machine-readable contract of any kind:
+  as of September 2026 there is no OpenAPI, GraphQL SDL, AsyncAPI, agent card, MCP server
+  or .well-known document on any Cinemark-controlled host. Its Brazilian subsidiary does
+  operate a branded Sensedia developer portal at developers.cinemark.com.br, but the API
+  list and interactive API Browser are gated behind developer registration and most of the
+  portal's public pages remain unmodified vendor template content. Showtime, ticketing and
+  loyalty integrations are delivered through partner agreements and third-party
+  aggregators such as Fandango, Atom Tickets and Movio.
 apis: []
 common:
   - type: DomainSecurity
@@ -55,7 +60,7 @@ common:
   - type: Website
     url: https://investors.cinemark.com
   - type: Mobile App (iOS)
-    url: https://apps.apple.com/us/app/cinemark-theatres/id383036269
+    url: https://apps.apple.com/us/app/cinemark-theatres/id435965836
   - type: Mobile App (Android)
     url: https://play.google.com/store/apps/details?id=com.cinemark.mobile
   - type: Loyalty Program
@@ -65,12 +70,53 @@ common:
   - type: PrivacyPolicy
     url: https://www.cinemark.com/privacy-policy
   - type: TermsOfService
-    url: https://www.cinemark.com/terms-of-use
+    url: https://www.cinemark.com/terms-conditions
   - type: Support
     url: https://www.cinemark.com/contact-us
   - type: Careers
     url: https://careers.cinemark.com
+  - type: DeveloperPortal
+    url: https://developers.cinemark.com.br/api-portal/
+  - type: SignUp
+    url: https://developers.cinemark.com.br/api-portal/user/register
+  - type: HelpCenter
+    url: https://www.cinemark.com/faq
+  - type: Packages
+    url: packages/cinemark-holdings-packages.yml
+  - type: LLMsTxt
+    url: llms/cinemark-holdings-llms.txt
+  - type: Authentication
+    url: authentication/cinemark-holdings-authentication.yml
+  - type: Plans
+    url: plans/cinemark-holdings-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/cinemark-holdings-rate-limits.yml
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v3
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    Cinemark's only developer surface is its Brazilian subsidiary's Sensedia portal at
+    developers.cinemark.com.br, whose API list and interactive API Browser are served only
+    to registered accounts — an anonymous GET of /api-portal/apis returns HTTP 403 "Acesso
+    negado" — while the pages it does serve publicly are unmodified vendor template
+    (Lorem ipsum terms and FAQ, Tumblr's OAuth endpoints on the auth page, Evernote's SDK
+    copy), and the api.cinemark.com host returns HTTP 502 on every path.
+  evidence:
+    - url: https://developers.cinemark.com.br/api-portal/apis
+      status: 403
+    - url: https://api.cinemark.com/openapi.json
+      status: 502
+    - url: https://www.cinemark.com/openapi.json
+      status: 404
+    - url: https://www.cinemark.com.br/programacao.xml
+      status: 404
+  checked: '2026-09-05'

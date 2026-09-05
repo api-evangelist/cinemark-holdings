@@ -1,0 +1,29 @@
+generated: '2026-09-05'
+method: searched
+source: https://developers.cinemark.com.br/api-portal/node/5
+limit_count: 0
+limits: []
+note: >-
+  NO PUBLISHED RATE LIMITS. Cinemark states no numeric limit, no window, no burst
+  allowance and no per-key or per-account scope anywhere on a public surface. The
+  developer portal's "Codigos de Erro" page does list two exhaustion-related status codes
+  — 429 Too Many Requests ("O consumidor estourou o limite de requisicoes por tempo") and
+  413 Request is to Large ("A requisicao esta ultrapassando o limite permitido para o
+  perfil do seu token de acesso") — which establishes that a per-token quota profile
+  exists, but never says what it is. No RateLimit-* or X-RateLimit-* response headers are
+  documented, and none could be observed because there is no reachable public endpoint:
+  api.cinemark.com returns HTTP 502 for every path and the portal's API list is gated at
+  HTTP 403. Treat this as an honest zero, not an unmeasured one.
+
+  CAVEAT: the status-code table this comes from sits on a Sensedia portal whose sibling
+  pages are unmodified vendor template (Lorem ipsum terms and FAQ, Tumblr OAuth endpoints,
+  Evernote SDK copy), so the table may be Sensedia boilerplate rather than a Cinemark
+  API's documented behaviour. It is recorded, not relied on.
+exhaustion_signals:
+  - {status: 429, meaning: 'Too Many Requests — consumer exceeded requests per unit time', source: https://developers.cinemark.com.br/api-portal/node/5}
+  - {status: 413, meaning: 'Request too large for the quota profile attached to the access token', source: https://developers.cinemark.com.br/api-portal/node/5}
+response_headers: []
+evidence:
+  - {url: 'https://developers.cinemark.com.br/api-portal/node/5', status: 200}
+  - {url: 'https://developers.cinemark.com.br/api-portal/apis', status: 403}
+  - {url: 'https://api.cinemark.com/', status: 502}

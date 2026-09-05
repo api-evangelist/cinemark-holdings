@@ -1,0 +1,24 @@
+generated: '2026-09-05'
+method: searched
+source: >-
+  https://developers.cinemark.com.br/api-portal/ (developer portal home and Primeiros
+  Passos), https://developers.cinemark.com.br/api-portal/user/register (registration),
+  and a search of cinemark.com and cinemark.com.br for any API pricing or plans page.
+plan_count: 0
+plans: []
+note: >-
+  Cinemark publishes NO API pricing of any kind. The only monetary statement anywhere on
+  the developer surface is that the developer ACCOUNT itself is free — the Cinemark Brasil
+  portal says "Crie uma conta de desenvolvedor gratuita e tenha acesso a todas as
+  funcionalidades do portal" — which prices the portal login, not API consumption. There
+  are no tiers, no quotas, no overage rates and no contact-sales form for API access. What
+  the portal does gate is the API list itself (/api-portal/apis returns HTTP 403 "Acesso
+  negado" anonymously), so any commercial terms attached to a specific API sit behind
+  registration and were not read. cinemark.com and cinemark.com.br carry consumer pricing
+  (tickets, the Movie Club subscription, gift cards) only; none of it is API pricing.
+free_developer_account: true
+free_developer_account_source: https://developers.cinemark.com.br/api-portal/
+evidence:
+  - {url: 'https://developers.cinemark.com.br/api-portal/', status: 200}
+  - {url: 'https://developers.cinemark.com.br/api-portal/user/register', status: 200}
+  - {url: 'https://developers.cinemark.com.br/api-portal/apis', status: 403}

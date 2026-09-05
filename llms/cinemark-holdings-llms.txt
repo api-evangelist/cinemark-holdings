@@ -1,0 +1,77 @@
+# Cinemark Holdings
+
+> Cinemark Holdings, Inc. (NYSE: CNK) is one of the largest motion picture exhibitors in
+> the world, operating theatres across the United States and Latin America under the
+> Cinemark, Century, Tinseltown, Rave and CineArts brands. Cinemark does not publish a
+> general-purpose public API. Showtime, ticketing and loyalty integrations are delivered
+> through partner agreements and third-party aggregators (Fandango, Atom Tickets, Movio).
+
+<!--
+  PROVENANCE — READ THIS FIRST.
+  generated: 2026-09-05
+  method: generated
+  source: assembled by API Evangelist from this repository's apis.yml and probe artifacts.
+  This file was NOT written or published by Cinemark Holdings. Cinemark serves no
+  /llms.txt on any of its hosts: www.cinemark.com/llms.txt, cinemark.com/llms.txt,
+  investors.cinemark.com/llms.txt and www.cinemark.com.br/llms.txt all returned HTTP 404
+  when probed on 2026-09-05. This is an independent third-party profile.
+-->
+
+## What is machine-readable here
+
+Nothing published by Cinemark. As of 2026-09-05 there is no OpenAPI, Swagger, GraphQL
+SDL, AsyncAPI, Protobuf, WSDL, agent card, MCP server or .well-known document served from
+any Cinemark-controlled host. An agent cannot call a Cinemark API today.
+
+## Developer surface that does exist
+
+- [Cinemark Developers (Brasil)](https://developers.cinemark.com.br/api-portal/): a
+  Sensedia API Portal instance, branded for Cinemark's Brazilian operations. Free
+  developer registration. The API list and interactive API Browser are gated: an
+  anonymous GET of /api-portal/apis returns HTTP 403 "Acesso negado".
+- [Authentication notes](https://developers.cinemark.com.br/api-portal/node/4): states
+  application-level auth only — register an app under the APPs menu, send the resulting
+  App-Token in a request header. NOTE: the same page's OAuth section carries Tumblr's
+  OAuth endpoints, which are unmodified vendor-template placeholders and are not
+  Cinemark's.
+- [Error codes](https://developers.cinemark.com.br/api-portal/node/5): an HTTP status
+  table (200/400/401/404/413/422/429/500), likely Sensedia boilerplate.
+- [Developer registration](https://developers.cinemark.com.br/api-portal/user/register)
+
+## What is behind a wall
+
+The portal's Terms and Conditions, FAQ, code examples and SDK download pages are
+unmodified Sensedia demo template content — Lorem ipsum, a LIPSUM-java-sdk reference, and
+Evernote's SDK page copy. Treat none of it as a Cinemark contract. The real contract, if
+one is published at all, sits behind the portal login.
+
+## Hosts probed
+
+- www.cinemark.com — HTTP 200 (consumer site, Cloudflare)
+- www.cinemark.com.br — HTTP 200 (consumer site, Next.js)
+- investors.cinemark.com / ir.cinemark.com — HTTP 200 (investor relations)
+- careers.cinemark.com — HTTP 200; answers 200 with the careers HTML for every
+  /.well-known/* path, a catch-all, not a document surface
+- api.cinemark.com — resolves via Cloudflare, HTTP 502 Bad Gateway on every path
+- developers.cinemark.com.br — HTTP 200 (developer portal)
+- api.cinemark.com.br, apis.cinemark.com, developer.cinemark.com — no DNS
+
+## Company
+
+- [Website](https://www.cinemark.com)
+- [Investor relations](https://investors.cinemark.com)
+- [Movie Club loyalty program](https://www.cinemark.com/movie-club)
+- [FAQ](https://www.cinemark.com/faq)
+- [Careers](https://careers.cinemark.com)
+- [LinkedIn](https://www.linkedin.com/company/cinemark)
+
+## Client libraries
+
+No first-party SDK exists on any public package registry. Two third-party community
+wrappers were found (npm `butaca` for Cinemark Argentina, PyPI `cinemark-python` for a
+Brazilian showtimes feed that is now dead). Neither is published or supported by Cinemark.
+
+## Corrections
+
+This profile is maintained by API Evangelist, not by Cinemark. If it is wrong, open an
+issue at https://github.com/api-evangelist/cinemark-holdings or email info@apievangelist.com.

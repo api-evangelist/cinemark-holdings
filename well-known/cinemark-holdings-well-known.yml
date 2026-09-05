@@ -1,0 +1,87 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live unauthenticated GET of RFC 8615 well-known paths against every host this record
+  knows: the registrable domain and www, the investor relations host, the careers host,
+  the Cinemark Brasil developer portal (developers.cinemark.com.br) and the Cinemark
+  Brasil consumer site. api.cinemark.com resolves in DNS but returns HTTP 502 for every
+  path, so no document could be read there.
+note: >-
+  NOTHING WAS FOUND. Every probed path returned 404 on the cinemark.com, cinemark.com.br
+  and developers.cinemark.com.br hosts. careers.cinemark.com answers HTTP 200 with the
+  same ~68 KB careers-site HTML for EVERY /.well-known/* path including paths that cannot
+  exist — an SPA/CMS catch-all, not a served document — so those 200s are recorded as
+  misses (soft_200: true) and no WellKnown or SecurityTxt pointer is wired into apis.yml.
+  This file records a measured absence, not a surface.
+hosts:
+  - host: cinemark.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+  - host: www.cinemark.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+  - host: investors.cinemark.com
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+  - host: careers.cinemark.com
+    note: >-
+      Catch-all host. Returns HTTP 200 and the careers-site HTML shell for every
+      /.well-known/* path probed. Treated as a miss on all paths.
+    documents:
+      - {path: /.well-known/security.txt, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/openid-configuration, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/api-catalog, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/agent-card.json, status: 200, soft_200: true, content_type: text/html, file: null}
+      - {path: /.well-known/agent.json, status: 200, soft_200: true, content_type: text/html, file: null}
+  - host: developers.cinemark.com.br
+    note: Cinemark Brasil developer portal (Sensedia API Portal).
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+  - host: www.cinemark.com.br
+    documents:
+      - {path: /.well-known/security.txt, status: 404, file: null}
+      - {path: /.well-known/openid-configuration, status: 404, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+      - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+      - {path: /.well-known/api-catalog, status: 404, file: null}
+      - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+      - {path: /.well-known/agent-card.json, status: 404, file: null}
+      - {path: /.well-known/agent.json, status: 404, file: null}
+  - host: api.cinemark.com
+    note: >-
+      Resolves via Cloudflare (104.19.221.117 / 104.19.222.117) but the origin returns
+      HTTP 502 Bad Gateway for the root and for every path probed. No document readable.
+    documents:
+      - {path: /.well-known/openid-configuration, status: 502, file: null}
+      - {path: /.well-known/oauth-authorization-server, status: 502, file: null}
