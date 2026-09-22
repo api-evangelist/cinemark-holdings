@@ -2,6 +2,9 @@ aid: cinemark-holdings
 url: >-
   https://raw.githubusercontent.com/api-evangelist/cinemark-holdings/refs/heads/main/apis.yml
 name: Cinemark Holdings
+x-docs-platform: redocly
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-21
 tags:
   - Cinema
   - Entertainment
