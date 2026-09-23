@@ -1,7 +1,9 @@
 ---
 title: Cinemark Announces Greater Movie Theater Accessibility
 url: https://afb.org/blog/entry/cinemark-announces-greater-movie-theater-accessibility
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Cinemark Holdings" press release artificial intelligence'
 position: 5
 source: serpapi-google
