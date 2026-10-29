@@ -1,4 +1,4 @@
-# Cinemark Holdings (cinemark-holdings)
+# Cinemark Holdings
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,54 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cinemark Holdings is one of the largest motion picture exhibitors in the world, operating theatres across the United States and Latin America under the Cinemark, Century, Tinseltown, Rave, and CineArts brands. Cinemark does not currently publish a general-purpose public developer portal; ticketing, showtime, and loyalty integrations are typically delivered through partner agreements and third-party aggregators (Movio, Atom Tickets, Fandango).
+Cinemark Holdings, Inc. (NYSE: CNK) is one of the largest motion picture exhibitors in the world, operating theatres across the United States and fifteen Latin American countries under the Cinemark, Century, Tinseltown, Rave and CineArts brands. Cinemark publishes no general-purpose public API and no machine-readable contract of any kind: as of September 2026 there is no OpenAPI, GraphQL SDL, AsyncAPI, agent card, MCP server or .well-known document on any Cinemark-controlled host. Its Brazilian subsidiary does operate a branded Sensedia developer portal at developers.cinemark.com.br, but the API list and interactive API Browser are gated behind developer registration and most of the portal's public pages remain unmodified vendor template content. Showtime, ticketing and loyalty integrations are delivered through partner agreements and third-party aggregators such as Fandango, Atom Tickets and Movio.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/cinemark-holdings/refs/heads/main/apis.yml)
+**Areas:** Cinema · Entertainment · Loyalty · Movie Theaters · Ticketing · Fortune 1000
 
-## Scope
+## Cinemark Holdings on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Cinemark Holdings is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cinemark-holdings/](https://apis.io/providers/cinemark-holdings/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Cinema
-- Entertainment
-- Loyalty
-- Movie Theaters
-- Ticketing
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (2)
 
-- **Created:** 2026-03-23
-- **Modified:** 2026-04-23
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Cinemark Holdings Authentication](https://apis.io/security/cinemark-holdings/cinemark-holdings-authentication/)
+- [Cinemark Holdings Domain Security](https://apis.io/security/cinemark-holdings/cinemark-holdings-domain-security/)
 
-No public APIs have been documented at this time. Cinemark currently has no general-purpose developer portal. Showtime, ticketing, and loyalty data is most commonly accessed through:
+#### Plans and pricing (1)
 
-- Partner integrations with aggregators such as Fandango, Atom Tickets, and Movio
-- Internal mobile/web client APIs that are not publicly documented
-- B2B agreements for studio reporting and theater booking
+Published plans, tiers and prices.
 
-If you discover a public Cinemark API, please open a pull request to add it.
+- [Cinemark Holdings Plans Pricing](https://apis.io/plans/cinemark-holdings/cinemark-holdings-plans-pricing/)
 
-## Common Properties
+#### Rate limits (1)
+
+Published request limits.
+
+- [Cinemark Holdings Rate Limits](https://apis.io/rate-limits/cinemark-holdings/cinemark-holdings-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.cinemark.com)
-- [Corporate Website](https://investors.cinemark.com)
-- [Mobile App (iOS)](https://apps.apple.com/us/app/cinemark-theatres/id383036269)
-- [Mobile App (Android)](https://play.google.com/store/apps/details?id=com.cinemark.mobile)
-- [Loyalty Program](https://www.cinemark.com/movie-club)
-- [Gift Cards](https://www.cinemark.com/gift-cards)
-- [Privacy Policy](https://www.cinemark.com/privacy-policy)
-- [Terms of Service](https://www.cinemark.com/terms-of-use)
+- [Sign up](https://developers.cinemark.com.br/api-portal/user/register)
 - [Support](https://www.cinemark.com/contact-us)
-- [Careers](https://careers.cinemark.com)
+- [Terms of service](https://www.cinemark.com/terms-conditions)
+- [Privacy policy](https://www.cinemark.com/privacy-policy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 18.3** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 34.2 |
+
+**Agent readiness 5.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cinemark-holdings/](https://apis.io/providers/cinemark-holdings/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cinemark Holdings: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cinemark-holdings/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
